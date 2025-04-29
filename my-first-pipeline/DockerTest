@@ -1,0 +1,15 @@
+pipeline {
+    agent any
+    stages {
+        stage('Docker Test') {
+            steps {
+                script {
+                    // Test Docker access by running the version command
+                    sh 'docker --version'
+                }
+            }
+        }
+        // Other stages can go here
+    }
+}
+
